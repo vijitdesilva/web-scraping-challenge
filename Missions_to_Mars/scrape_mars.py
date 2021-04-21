@@ -69,6 +69,7 @@ def marsHem():
     browser.visit(hemispheres_url)
     hemisphere_html = browser.html
     hemisphere_soup = BeautifulSoup(hemisphere_html,'html.parser')
+    
     hemisphere_names = []
 
     results = hemisphere_soup.find_all('div', class_="collapsible results")
@@ -92,8 +93,10 @@ def marsHem():
         browser.visit(url)
         html = browser.html
         soup = BeautifulSoup(html, 'html.parser')
+        
         results = soup.find_all('img', class_='wide-image')
         relative_img_path = results[0]['src']
+        
         img_link = 'https://marshemispheres.com/' + relative_img_path
         full_imgs.append(img_link)
         
@@ -105,8 +108,10 @@ def marsHem():
         hemisphere_dict['title'] = title
         hemisphere_dict['img_url'] = img
         hemisphere_image_urls.append(hemisphere_dict)
-    return hemisphere_names
+    return hemisphere_image_urls
             
             
+    browser.quit()
 
-
+if __name__ == '__main__':
+    scrape()
