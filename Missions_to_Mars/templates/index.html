@@ -36,22 +36,24 @@
                     <p>{{mars.mars_facts | safe}}</p>
                 </div>
         
-        <div class ="row" id="mars-hemispheres">
-            <div class = "col-md-12">
-                <h3><center>Mars Hemispheres</center></h3>
-
-                {% for title, img in mars_hemi_zip%}
-                    <div class = "col-md-6">
-                        <div class = "thumbnail">
-                            <img src = "{{img.img_url}}">
-                                <h3>{{title.title}}</h3>
-                            </div>
-                        </div>
-                {% endfor %}
-                    </div>
 
             
             </div>
+        <div class ="row" id="mars-hemispheres">
+    <div class = "col-md-12">
+        <h3><center>Mars Hemispheres</center></h3>
+        {% for hemis in mars.mars_hemisphere %}
+            <div class = "col-md-6">
+                <div class = "thumbnail">
+                    <img src = "{{hemis.img_url}}">
+                        <h3>{{hemis.title}}</h3>
+                    </div>
+                </div>
+        {% endfor %}
+            </div>
+    
+    </div>  
+        
         </div>
         </div>
 

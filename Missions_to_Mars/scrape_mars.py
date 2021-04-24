@@ -107,7 +107,7 @@ def marsHem():
         hemisphere_dict = {}
         hemisphere_dict['title'] = title
         hemisphere_dict['img_url'] = img
-        hemisphere_image_urls.append(hemisphere_dict)
+        hemisphere_image_urls.append(hemisphere_dict) 
     return hemisphere_image_urls
             
             

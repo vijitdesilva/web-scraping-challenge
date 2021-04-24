@@ -1,0 +1,14 @@
+  <!--<div class ="row" id="mars-hemispheres">
+            <div class = "col-md-12">
+                <h3><center>Mars Hemispheres</center></h3>
+                
+                {% for hemis in mars.mars_hemisphere %}   
+                    <!--div class="col-md-6 border border-secondary" style="background-color:lightgrey;"-->
+                      <div class="col-lg-3 col-md-6 col-sm-6" align="center>  
+                        <h5 class="text-info"><strong>{{hemis.title}}</strong></h5>
+                        <a href={{hemis.img_url}}>                   
+                        <img src="{{hemis.img_url | default('static/images/error.png', true)}}" alt="...">
+                        </a>
+                    </div>
+                {% endfor %}
+                    </div> -->
